@@ -30,7 +30,11 @@ module.exports = class PalabraService{
             const resultado = await this.palabraService.eliminarPalabra(palabra)
             res.status(200).json(resultado)
         }catch(error){
-            res.status(422).json({errorMsg: error.message})
+            if(error instanceof BusinessError){
+                res.status(422).json({errorMsg: error.message})
+            }else{
+                res.status(404).json({errorMsg: error.message})
+            }
         }
     }
 }

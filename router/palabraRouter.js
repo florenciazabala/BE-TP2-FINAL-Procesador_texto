@@ -10,7 +10,7 @@ module.exports = class HabitacionesRouter {
     start(){
         this.router.get('/', this.palabraController.listarPalabras)
         this.router.post('/', this.palabraController.guardarPalabra)
-        this.router.delete('/:palabra?', this.palabraController.removerPalabra)
+        this.router.delete('/:palabra?', this.palabraController.eliminarPalabra)
         
         return this.router
     }

@@ -13,7 +13,14 @@ module.exports = class PalabraService{
     }
 
     async listarPalabras(){
-        const resultado = await this.palabraRepository.listarPalabras();
+        const fraseActiva = await this.fraseRepository.buscarFraseActiva();
+        const resultado = await this.palabraRepository.listarPalabras(fraseActiva.id);
+        const palabrasDTO = resultado.reduce((group, word) => {
+            const { value } = 0;
+            group[value] = group[value] ?? 0;
+            group[value].push(value++);
+            return group;
+          }, {});
         return resultado ? resultado : 'No se han ingresado palabras';
     }
 
