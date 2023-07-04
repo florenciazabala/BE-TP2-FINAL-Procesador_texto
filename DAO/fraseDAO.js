@@ -1,7 +1,7 @@
 const MongoDBConnection = require('../config/mongodbConnection')
 const mongo = require('mongodb')
 
-module.exports = class HabitacionesDAOMongo {
+module.exports = class FraseDAO {
 
   constructor() {
     this.collection = MongoDBConnection.getInstance().getDb().collection('frases')

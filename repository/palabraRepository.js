@@ -1,6 +1,6 @@
 const PalabraDAO = require('../DAO/palabraDAO')
 
-module.exports = class PalabraDAO{
+module.exports = class PalabraRepository{
 
     constructor(){
         this.palabraDAO = new PalabraDAO()

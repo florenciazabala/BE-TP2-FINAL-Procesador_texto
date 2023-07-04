@@ -1,6 +1,6 @@
 const FraseDAO = require('../DAO/fraseDAO')
 
-module.exports = class FraseDAO{
+module.exports = class FraseRepository{
 
     constructor(){
         this.fraseDAO = new FraseDAO()
