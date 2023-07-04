@@ -1,0 +1,22 @@
+{
+  "name": "be-tp2-final-procesador_texto",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/florenciazabala/BE-TP2-FINAL-Procesador_texto.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/florenciazabala/BE-TP2-FINAL-Procesador_texto/issues"
+  },
+  "homepage": "https://github.com/florenciazabala/BE-TP2-FINAL-Procesador_texto#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

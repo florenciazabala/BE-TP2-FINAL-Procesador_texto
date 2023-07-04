@@ -1,0 +1,112 @@
+{
+	"info": {
+		"_postman_id": "a41d4321-b0f4-4b99-89b1-ff1f564b25b5",
+		"name": "Procesador de texto - cadaver exquisito",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Palabras",
+			"item": [
+				{
+					"name": "Listar palabras",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Ingresar palabra",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"value\": \"prueba\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/cadaverexquisito.ort/v1/palabras",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"cadaverexquisito.ort",
+								"v1",
+								"palabras"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar palabra",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/cadaverexquisito.ort/v1/palabras/prueba",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"cadaverexquisito.ort",
+								"v1",
+								"palabras",
+								"prueba"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Frases",
+			"item": [
+				{
+					"name": "Frase en juego",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/cadaverexquisito.ort/v1/frases?current=true",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"cadaverexquisito.ort",
+								"v1",
+								"frases"
+							],
+							"query": [
+								{
+									"key": "current",
+									"value": "true"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
