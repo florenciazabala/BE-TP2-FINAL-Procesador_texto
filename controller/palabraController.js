@@ -25,16 +25,17 @@ module.exports = class PalabraService{
     }
 
     eliminarPalabra = async (req,res) => {
-        let {palabra} = req.params
+        let {value} = req.params
         try{
-            const resultado = await this.palabraService.eliminarPalabra(palabra)
+            const resultado = await this.palabraService.eliminarPalabra(value)
             res.status(200).json(resultado)
         }catch(error){
             if(error instanceof BusinessError){
-                res.status(422).json({errorMsg: error.message})
+                res.status(422)
             }else{
-                res.status(404).json({errorMsg: error.message})
+                res.status(404)
             }
+            res.json({errorMsg: error.message})
         }
     }
 }
