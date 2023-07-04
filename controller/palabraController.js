@@ -1,6 +1,6 @@
 const PalabraService = require('../service/palabraService')
 
-module.exports = class PalabraService{
+module.exports = class PalabraController{
     constructor(){
         this.palabraService = new PalabraService()
     }
